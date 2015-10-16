@@ -54,7 +54,7 @@ def entropy_per_word(wordcount):
 def parser_setup():
     """Instantiate and return an ArgumentParser instance."""
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('-v','--verbose', action='store_true',
+    ap.add_argument('-v', '--verbose', action='store_true',
                     help='Display entropy for requested word count')
     ap.add_argument('wordcount', nargs='?', default=3, type=int,
                     help='Number of words to generate (default: %(default)s).')
