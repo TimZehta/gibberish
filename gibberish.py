@@ -5,27 +5,23 @@ import math
 import random
 import string
 
-__all__ = ('generate_word', 'generate_words')
-
-initial_consonants = list(set(string.ascii_lowercase) - set('aeiou') -
+__all__ = ('entropy_per_word', 'generate_word', 'generate_words')
+vowel_set = set('aeiou')
+initial_consonants = list(set(string.ascii_lowercase) - vowel_set -
                           # remove those easily confused with others
-                          set('qxc') |
+                          set('cqx') |
                           # add some crunchy clusters
-                          set(['bl', 'br', 'cl', 'cr', 'dr', 'fl',
-                               'fr', 'gl', 'gr', 'pl', 'pr', 'sk',
-                               'sl', 'sm', 'sn', 'sp', 'st', 'str',
-                               'sw', 'tr', 'ch', 'sh'])
+                          set("""bl br ch dr fl fr gl gr kl kr pl pr sh sk sl
+                              sm sn sp st str sw tr""".split())
                           )
-
-final_consonants = list(set(string.ascii_lowercase) - set('aeiou') -
+final_consonants = list(set(string.ascii_lowercase) - vowel_set -
                         # remove the confusables
-                        set('qxcsj') |
+                        set('cjqsxy') |
                         # add some crunchy clusters
-                        set(['ct', 'ft', 'mp', 'nd', 'ng', 'nk', 'nt',
-                             'pt', 'sk', 'sp', 'ss', 'st', 'ch', 'sh'])
+                        set("""ch ct ft ld lf lk ll lm lp lt mp nd ng nk nt pt
+                            rm sh sk sp ss st""".split())
                         )
-
-vowels = 'aeiou'
+vowels = list(vowel_set | set("""ee oo ou ui""".split()))
 
 
 def generate_word():
@@ -46,18 +42,23 @@ def entropy_per_word(wordcount):
     entropy_vowels = math.log(len(vowels), 2)
     entropy_final = math.log(len(final_consonants), 2)
     entropy_per_word = entropy_initial + entropy_vowels + entropy_final
-    entropy_total = entropy_per_word * wordcount
-    return('Pseduo words contain a total of %.2f bits of entropy (%.2f bits'
-           ' each):' % (entropy_total, entropy_per_word))
+    entropy_number = math.log(10, 2) * 4
+    entropy_total = entropy_per_word * wordcount + entropy_number
+    return('The phrase(s) below contains a total of %.2f bits of entropy'
+           '\n(%.2f bits per word and %.2f bits for the number):' %
+           (entropy_total, entropy_per_word, entropy_number))
 
 
 def parser_setup():
     """Instantiate and return an ArgumentParser instance."""
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('-c', '--count', default=1, type=int,
+                    help='Number of phrases (default: %(default)s).')
     ap.add_argument('-v', '--verbose', action='store_true',
                     help='Display entropy for requested word count')
     ap.add_argument('wordcount', nargs='?', default=3, type=int,
-                    help='Number of words to generate (default: %(default)s).')
+                    help='Number of words in the phrase (default:'
+                    ' %(default)s).')
     args = ap.parse_args()
 
     return args
@@ -68,7 +69,13 @@ def console_main():
     if args.verbose:
         print(entropy_per_word(args.wordcount))
         print
-    print(' '.join(generate_words(args.wordcount)))
+    for x in xrange(0, args.count):
+        number = '%04d' % random.randint(0, 9999)
+        words = generate_words(args.wordcount)
+        words.insert(1, number)
+        phrase = '.'.join(words)
+        phrase = phrase.capitalize()
+        print(phrase)
 
 
 if __name__ == '__main__':
