@@ -4,7 +4,7 @@ try:
     from setuptools import setup
     kwargs = {
         'entry_points': {'console_scripts':
-            'gibberish = gibberish:console_main',
+            'glarg = glarg:console_main',
         }
     }
 except ImportError:
@@ -16,13 +16,13 @@ except ImportError:
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 setup(
-    name='Gibberish',
+    name='Glarg',
     description="A pseudo-word generator",
     version='0.2',
-    author='Gregory Haskins',
-    author_email='greg@greghaskins.com',
-    url='https://github.com/greghaskins/gibberish',
-    py_modules=('gibberish',),
+    author='Timid Robot Zehta',
+    author_email='tim@zehta.me',
+    url='https://github.com/TimZehta/glarg',
+    py_modules=('glarg',),
     license='MIT License',
     long_description=open(os.path.join(base_dir, 'README.rst')).read(),
     **kwargs

@@ -1,4 +1,6 @@
-Copyright (c) 2011-2012 Gregory Haskins, http://greghaskins.com
+Copyright for portions of project Glarg are held by Gregory Haskins, 2011-2012
+as part of project Gibberish. All other copyright for project Glarg are held by
+Timid Robot Zehta, 2015-2016.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
