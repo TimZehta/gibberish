@@ -14,6 +14,7 @@ import string
 
 __all__ = ("entropy_per_word", "generate_word", "generate_words")
 VOWELS = set("aeiou")
+FILL_VOWELS = list(VOWELS | set("ee oo ou ui".split()))
 PRE_CONSONANTS = list(set(string.ascii_lowercase) -
                       # remove vowels
                       VOWELS -
@@ -30,7 +31,6 @@ POST_CONSONANTS = list(set(string.ascii_lowercase) -
                        # add some crunchy clusters
                        set("ch ct ft ld lf lk ll lm lp lt mp nd ng nk nt pt rm"
                            " sh sk sp ss st".split()))
-FILL_VOWELS = list(VOWELS | set("ee oo ou ui".split()))
 
 
 def generate_word():
