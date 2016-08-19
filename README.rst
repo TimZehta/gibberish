@@ -7,7 +7,8 @@ History
 =======
 
 The ``glarg`` module let's you generate random, pronounceable pseudo-words. It
-started life as `StackOverflow answer`_ about password generators. It was then forked from `greghaskins/gibberish`_, after being abandoned for over 4 years.
+started life as `StackOverflow answer`_ about password generators. It was then
+forked from `greghaskins/gibberish`_, after being abandoned for over 4 years.
 
 .. _`StackOverflow answer`: http://stackoverflow.com/a/5502875/356942
 .. _`greghaskins/gibberish`: https://github.com/greghaskins/gibberish
@@ -16,7 +17,9 @@ started life as `StackOverflow answer`_ about password generators. It was then f
 Usage
 =====
 
-``glarg`` creates pseudo-words which consist of one consonant-vowel-consonant syllable that sounds like it could be English. Sometimes it spits out real words; most of the time not::
+``glarg`` creates pseudo-words which consist of one consonant-vowel-consonant
+syllable that sounds like it could be English. Sometimes it spits out real
+words; most of the time not::
 
   >>> import glarg
   >>> glarg.generate_word()
