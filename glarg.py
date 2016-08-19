@@ -33,18 +33,29 @@ POST_CONSONANTS = list(set(string.ascii_lowercase) -
                            " sh sk sp ss st".split()))
 
 
-def generate_word():
-    """Returns a random consonant-vowel-consonant pseudo-word.
+def generate_phrase(wordcount):
+    """Returns a list of "wordcount" pseudo-words.
     """
-    return "".join(random.choice(s) for s in (PRE_CONSONANTS,
-                                              FILL_VOWELS,
-                                              POST_CONSONANTS))
+    number = "{0:04d}".format(random.randint(0, 9999))
+    words = generate_words(wordcount)
+    words.insert(1, number)
+    phrase = ".".join(words)
+    phrase = phrase.capitalize()
+    return phrase
 
 
 def generate_words(wordcount):
     """Returns a list of "wordcount" pseudo-words.
     """
     return [generate_word() for _ in list(range(wordcount))]
+
+
+def generate_word():
+    """Returns a random consonant-vowel-consonant pseudo-word.
+    """
+    return "".join(random.choice(s) for s in (PRE_CONSONANTS,
+                                              FILL_VOWELS,
+                                              POST_CONSONANTS))
 
 
 def entropy_per_word(wordcount, count):
@@ -86,11 +97,7 @@ def main():
     if args.verbose:
         print(entropy_per_word(args.wordcount, args.count))
     for _ in list(range(0, args.count)):
-        number = "{0:04d}".format(random.randint(0, 9999))
-        words = generate_words(args.wordcount)
-        words.insert(1, number)
-        phrase = ".".join(words)
-        phrase = phrase.capitalize()
+        phrase = generate_phrase(args.wordcount)
         print(phrase)
 
 

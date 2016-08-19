@@ -1,0 +1,6 @@
+# vim: set ft=conf:
+pytest >= 2.9
+pytest-colordots >= 0.1
+pytest-flakes >= 1.0.1
+pytest-pep8 >= 1.0.6
+pytest-pythonpath >= 0.7
