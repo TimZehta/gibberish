@@ -82,6 +82,22 @@ was installed, e.g. for non-default python3::
     glarg_test3
 
 
+Python Compatibility
+====================
+
+This module is compatible with:
+
+- 2.7
+- 3.4
+- 3.5
+- 3.6
+
+.. image:: https://img.shields.io/travis/TimZehta/glarg/master.svg
+    :alt: badge: Travis CI master branch status
+    :align: right
+    :target: https://travis-ci.org/TimZehta/glarg
+
+
 License
 =======
 
