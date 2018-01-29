@@ -60,7 +60,7 @@ Testing Quick Start
    resides).
 2. Install virtual environment (assuming Python 2 is default)::
 
-    mkvirtualenv -a . -r tests/requirements.txt glarg_test2
+     mkvirtualenv -a . -r tests/requirements.txt glarg_test2
 
    a. If installing requirements errors, update `pip`::
 
@@ -72,14 +72,14 @@ Testing Quick Start
 
 3. Run pytest::
 
-    py.test
+     py.test
 
 To test against alternate Python versions, it may be useful to create virtual
 environments with an interpreter other than the one with which ``virtualenv``
 was installed, e.g. for non-default python3::
 
-    PYTHONPATH='' mkvirtualenv -a . -p '/usr/bin/env python3'
-        -r tests/requirements.txt glarg_test3
+  mkvirtualenv -a . -p '/usr/bin/env python3' -r tests/requirements.txt \
+    glarg_test3
 
 
 License
