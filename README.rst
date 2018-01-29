@@ -3,27 +3,20 @@ glarg: a pseudo-word passphrase generator
 =========================================
 
 
-History
-=======
-
-The ``glarg`` module let's you generate random, pronounceable pseudo-words. It
-started life as `StackOverflow answer`_ about password generators. It was then
-forked from `greghaskins/gibberish`_, after being abandoned for over 4 years.
-
-.. _`StackOverflow answer`: http://stackoverflow.com/a/5502875/356942
-.. _`greghaskins/gibberish`: https://github.com/greghaskins/gibberish
-
-
 Objectives
 ==========
 
-1. **Security**: A reasonably high amount of entropy so that guessing is
-   difficult *even when the generation formula is known*
-2. **Convenience**:
+1. **Convenience**:
 
-   A. **Easy to remember**: subjectively easier for English speakers
+   A. **Easy to remember**: subjectively easier for English speakers than
+      alternatives
    B. **Easy to input**: letters and non-letters are grouped to minimize
       keyboard switching on mobile devices
+
+2. **Security**: A reasonably high amount of entropy so that guessing is
+   difficult *even when the generation formula is known*
+3. **Compatibility**: the formula meets the majority of sites' complexity
+   requirements
 
 
 Usage
@@ -47,6 +40,17 @@ It also works as a console script::
   Noonk.7038.swab.noold.swousp.kusk.suk
   ~$ glarg
   Dek.1832.led.swuip
+
+
+History
+=======
+
+The ``glarg`` module let's you generate random, pronounceable pseudo-words. It
+started life as `StackOverflow answer`_ about password generators. It was then
+forked from `greghaskins/gibberish`_, after being abandoned for over 4 years.
+
+.. _`StackOverflow answer`: http://stackoverflow.com/a/5502875/356942
+.. _`greghaskins/gibberish`: https://github.com/greghaskins/gibberish
 
 
 Testing Quick Start
