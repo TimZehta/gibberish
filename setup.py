@@ -16,7 +16,7 @@ with open(os.path.join(setup_path, "README.rst"), "rb") as f:
     long_description = f.read().decode("utf-8")
 
 setup(name='Glarg',
-      description="A pseudo-word generator",
+      description="A pseudo-word passphrase generator",
       version='0.2',
       author='Timid Robot Zehta',
       author_email='tim@zehta.me',
