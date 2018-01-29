@@ -17,13 +17,13 @@ forked from `greghaskins/gibberish`_, after being abandoned for over 4 years.
 Objectives
 ==========
 
-1. Security: A reasonably high amount of entropy so that guessing is difficult
-   *even when the geneation formula is known*
-2. Convenience:
+1. **Security**: A reasonably high amount of entropy so that guessing is
+   difficult *even when the generation formula is known*
+2. **Convenience**:
 
-   A. Easy to remember: subjectively easier for English speakers
-   B. Easy to input: letters and non-letters are grouped to minimize keyboard
-      switching on mobile devices
+   A. **Easy to remember**: subjectively easier for English speakers
+   B. **Easy to input**: letters and non-letters are grouped to minimize
+      keyboard switching on mobile devices
 
 
 Usage
