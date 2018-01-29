@@ -2,11 +2,10 @@ sudo: required
 dist: trusty
 language: python
 python:
-  - "2.7"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.6"
+  - "2.7" # Latest
+  - "3.4" # Trusty
+  - "3.5" # Xenial
+  - "3.6" # Latest
   - "nightly"
 matrix:
   allow_failures:
