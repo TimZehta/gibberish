@@ -88,9 +88,9 @@ Python Compatibility
 This module is compatible with:
 
 - 2.7
-- 3.4
 - 3.5
 - 3.6
+- 3.7
 
 .. image:: https://img.shields.io/travis/TimZehta/glarg/master.svg
     :alt: badge: Travis CI master branch status
