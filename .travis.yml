@@ -2,11 +2,12 @@ sudo: required
 dist: bionic
 language: python
 python:
-  - "2.7" # Latest 2.x
-  - "3.5" # Debian Stretch
-  - "3.6" #
-  - "3.7" # Debian Buster
-  - "nightly"
+  - "2.7"     # Last 2.x
+  - "3.5"     # Debian Stretch
+  - "3.6"     #
+  - "3.7"     # Debian Buster
+  - "3.8"     #
+  - "nightly" #
 matrix:
   allow_failures:
     - python: "nightly"

@@ -85,17 +85,18 @@ was installed, e.g. for non-default python3::
 Python Compatibility
 ====================
 
-This module is compatible with:
-
-- 2.7
-- 3.5
-- 3.6
-- 3.7
-
 .. image:: https://img.shields.io/travis/TimidRobot/glarg/master.svg
     :alt: badge: Travis CI master branch status
     :align: right
     :target: https://travis-ci.org/TimidRobot/glarg
+
+This module is compatible with:
+
+- Python 2.7
+- Python 3.5
+- Python 3.6
+- Python 3.7
+- Python 3.8
 
 
 License
