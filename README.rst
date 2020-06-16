@@ -92,10 +92,10 @@ This module is compatible with:
 - 3.6
 - 3.7
 
-.. image:: https://img.shields.io/travis/TimZehta/glarg/master.svg
+.. image:: https://img.shields.io/travis/TimidRobot/glarg/master.svg
     :alt: badge: Travis CI master branch status
     :align: right
-    :target: https://travis-ci.org/TimZehta/glarg
+    :target: https://travis-ci.org/TimidRobot/glarg
 
 
 License
@@ -104,5 +104,5 @@ License
 - `LICENSE.txt`_ (Expat License/`MIT License`_)
 
 .. _`LICENSE.txt`:
-   https://github.com/TimZehta/glarg/blob/master/LICENSE.txt
+   https://github.com/TimidRobot/glarg/blob/master/LICENSE.txt
 .. _`MIT License`: http://www.opensource.org/licenses/MIT
