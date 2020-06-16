@@ -36,7 +36,7 @@ POST_CONSONANTS = list(set(string.ascii_lowercase) -
 def generate_phrase(wordcount):
     """Returns a list of "wordcount" pseudo-words.
     """
-    number = "{0:04d}".format(random.randint(0, 9999))
+    number = "{0:05d}".format(random.randint(0, 99999))
     words = generate_words(wordcount)
     words.insert(1, number)
     phrase = ".".join(words)
@@ -65,7 +65,7 @@ def entropy_per_word(wordcount, count):
     entropy_vowels = math.log(len(FILL_VOWELS), 2)
     entropy_final = math.log(len(POST_CONSONANTS), 2)
     entropy_per_word = entropy_initial + entropy_vowels + entropy_final
-    entropy_number = math.log(10, 2) * 4
+    entropy_number = math.log(10, 2) * 5
     entropy_total = entropy_per_word * wordcount + entropy_number
     if count > 1:
         plural = "s"
